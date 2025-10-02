@@ -1,0 +1,19 @@
+{
+  "name": "image-analysis-tool",
+  "version": "1.0.0",
+  "description": "ابزار تحلیل تصویر مستقل و قدرتمند",
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "npx serve dist",
+    "serve": "npx serve dist"
+  },
+  "keywords": [
+    "image-analysis",
+    "microscopy",
+    "standalone",
+    "offline",
+    "persian"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
