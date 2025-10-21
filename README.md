@@ -1,168 +1,246 @@
-# Smart Image Analysis Tool 🔬
+# CIA v1.5.2 - Concrete Image Analysis Software 🔬
 
-A powerful and completely standalone tool for analyzing microscopic images and identifying different materials that works without the need for a server or internet connection.
+[English](#english) | [فارسی](#persian)
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+---
+
+## English
+
+A powerful and completely standalone tool for analyzing microscopic images and identifying different materials. Works entirely in your browser without requiring any server or internet connection.
+
+![Version](https://img.shields.io/badge/version-1.5.2-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Standalone](https://img.shields.io/badge/standalone-✓-brightgreen)
 ![Offline](https://img.shields.io/badge/offline-ready-orange)
 ![Persian](https://img.shields.io/badge/persian-supported-red)
 
-## ✨ Key Features
+### ✨ Key Features
 
 - 🚀 **Completely Standalone** - No server or internet required
-- 🎯 **Advanced Image Processing** - Multiple detection algorithms (Otsu, Adaptive, Triangle)
-- 🌈 **Precise Color Analysis** - Material identification and analysis
-- 📊 **Interactive Charts** - Visual results display with Chart.js
+- 🎯 **10 Advanced Algorithms** - Including new Mean Shift, Watershed, and FCM
+- 🌈 **Precise Material Analysis** - Identify and analyze different materials
+- 📊 **Interactive Charts** - Beautiful visualizations with Chart.js
 - 💾 **Local Storage** - All data stays in your browser
-- 🌐 **Multilingual** - Full support for Persian and English
-- 📱 **Responsive Design** - Compatible with all devices
+- 🌐 **Bilingual Support** - Full Persian and English interface
+- 📱 **Responsive Design** - Works on desktop, tablet, and mobile
+- 🔄 **Back Navigation** - Return to previous steps anytime
 
-## 🚀 Quick Installation
+### 🆕 New in Version 1.5.2
 
-### Method 1: Using Ready Files (Recommended)
+#### Advanced Algorithms Added:
+8. **Mean Shift Segmentation** - `x_{t+1} = Σ(xᵢK(xᵢ-xₜ)) / Σ(K(xᵢ-xₜ))`
+9. **Watershed Segmentation** - `W(f) = {x ∈ D | ∀y ∈ N(x): f(x) ≤ f(y)}`
+10. **Fuzzy C-Means (FCM)** - `uᵢⱼ = 1 / Σ((dᵢⱼ/dᵢₖ)^(2/(m-1)))`
 
-1. **Download Files:**
-   - Download the `dist` folder files
-   - Or download the latest version from [Releases](../../releases)
+#### Enhanced Features:
+- **Mathematical Formulas** displayed for each algorithm
+- **Usage Recommendations** in both languages
+- **Back Navigation** - Return to any previous step
+- **Algorithm Information** in analysis results
+- **Complete Multilingual Support**
 
-2. **Run:**
-   - Open `index.html` in your browser
-   - Or use a local web server:
-   ```bash
-   # With Python
-   python -m http.server 8000
-   
-   # With Node.js
-   npx serve dist
-   
-   # With PHP
-   php -S localhost:8000
-   ```
+### 🚀 Quick Start
 
-### Method 2: Build from Source
+#### Method 1: Direct Use (Recommended)
+1. **Download Files** - Download all files from this repository
+2. **Open in Browser** - Simply open `index.html` in your web browser
+3. **Start Analyzing** - Upload your images and begin analysis
 
+#### Method 2: Local Server
 ```bash
-# Clone project
-git clone https://github.com/[username]/image-analyzer.git
-cd image-analyzer
+# With Python
+python -m http.server 8000
 
-# Install dependencies
-npm install
+# With Node.js
+npx serve . -p 8000
 
-# Build project
-npm run build
-
-# Run
-npm run preview
+# With PHP
+php -S localhost:8000
 ```
 
-## 📖 Usage Guide
+### 📖 Usage Guide
 
-### Step 1️⃣: Upload Image
-- Upload your image by clicking or dragging
-- Supported formats: JPG, PNG, GIF
+#### Step 1️⃣: Upload Image
+- Upload your microscopic image (JPG, PNG, GIF supported)
+- Drag & drop or click to select
 
-### Step 2️⃣: Image Processing
-Choose the appropriate algorithm:
-- **Otsu**: Automatic optimal threshold detection
-- **Adaptive**: Adaptive threshold for complex images
-- **Triangle**: Triangle method for binary images
-- **Manual**: Full manual threshold control
+#### Step 2️⃣: Select Algorithm
+Choose from 10 available algorithms:
+- **Otsu** - Automatic optimal threshold
+- **Adaptive** - Variable lighting compensation
+- **Triangle** - Asymmetric histogram processing
+- **Wellner** - Local adaptive threshold
+- **Multi-level** - Multiple threshold segmentation
+- **K-means** - Clustering-based segmentation
+- **Mean Shift** - Homogeneous region detection
+- **Watershed** - Connected object separation
+- **FCM** - Fuzzy boundary analysis
+- **Manual** - User-controlled threshold
 
-### Step 3️⃣: Region Selection
-- Select regions of interest on the image
-- Identified regions are displayed with different colors
+#### Step 3️⃣: Process & Analyze
+- View mathematical formula and recommendations
+- Process image with selected algorithm
+- Navigate back to change settings anytime
 
-### Step 4️⃣: Settings
-- Set measurement unit (nanometer/micrometer)
-- Enter pixel-to-reality ratio
-- Configure analysis parameters
+#### Step 4️⃣: Select Baseline
+- Draw baseline on processed image
+- Use magnetic snapping for precision
+- Return to previous step if needed
 
-### Step 5️⃣: Results
-Results are displayed in three sections:
-- **Summary**: Overall statistics and percentages
-- **Details**: Complete data table
-- **Charts**: Interactive visual display
+#### Step 5️⃣: Replicate Lines
+- Set replication parameters
+- Generate analysis lines
+- Adjust settings and regenerate
 
-## 🛠️ Technologies Used
+#### Step 6️⃣: Distance Analysis
+- Configure measurement units
+- Set pixel-to-reality ratio
+- Start comprehensive analysis
+
+#### Step 7️⃣: View Results
+- Comprehensive analysis results
+- Interactive charts and visualizations
+- Export to PDF/Excel formats
+
+### 🔬 Algorithm Information
+
+Each algorithm includes:
+- **Mathematical Formula** with proper notation
+- **Detailed Description** in both languages
+- **Usage Recommendations** for optimal results
+- **Best Use Cases** for different image types
+
+### 🛠️ Technologies Used
 
 - **React 18** + **TypeScript** - Modern UI framework
-- **Vite** - Fast and optimized build tool
-- **Tailwind CSS** - Beautiful responsive design
-- **Chart.js** - Interactive charts
+- **Vite** - Fast build system
+- **Tailwind CSS** - Responsive design
+- **Chart.js** - Interactive visualizations
 - **Canvas API** - Advanced image processing
 - **jsPDF** - PDF report generation
 - **html2canvas** - Chart to image conversion
 
-## 🔒 Security & Privacy
+### 🔒 Security & Privacy
 
-- ✅ All processing happens in your browser
-- ✅ No data sent to servers
-- ✅ Your images stay on your device
-- ✅ Works offline after initial load
+- ✅ **100% Client-Side** - All processing in your browser
+- ✅ **No Data Transmission** - Images never leave your device
+- ✅ **Offline Capable** - Works without internet
+- ✅ **No Registration** - No accounts or personal data required
+- ✅ **Open Source** - Code available for inspection
 
-## 📊 Analysis Capabilities
+### 📊 Perfect For
 
-### Image Processing Algorithms:
-- **Otsu Thresholding**: Automatic optimal threshold detection
-- **Adaptive Thresholding**: Adaptive threshold for variable lighting
-- **Triangle Method**: Triangle method for binary images
-- **Manual Threshold**: Complete manual control
+- 🔬 **Scientific Research** - Microscopic sample analysis
+- 🏭 **Quality Control** - Material inspection
+- 🎓 **Education** - Teaching and learning tool
+- 🏢 **Industry** - Production line analysis
 
-### Material Analysis:
-- Black Material identification
-- Dark Gray detection
-- Light Gray identification
-- White Material analysis
+### 🤝 Contributing
 
-### Reporting:
-- PDF export with complete details
-- Excel export for further analysis
-- Save processed images
-- Downloadable charts
+This is an open-source project. Contributions welcome!
 
-## 🎯 Applications
+### 📝 License
 
-- **Scientific Research**: Microscopic sample analysis
-- **Quality Control**: Material and product inspection
-- **Education**: Educational tool for students
-- **Industry**: Material analysis in production lines
+MIT License - Free for personal and commercial use
 
-## 🤝 Contributing
+### 🆘 Support
 
-This is an open-source project and we welcome your contributions:
-
-1. Fork the project
-2. Create a new branch (`git checkout -b feature/new-feature`)
-3. Commit your changes (`git commit -m 'Add new feature'`)
-4. Push to your branch (`git push origin feature/new-feature`)
-5. Create a Pull Request
-
-## 📝 License
-
-This project is released under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-If you have issues or questions:
-
-- Create new [Issues](../../issues)
-- Check [Discussions](../../discussions)
-- Read the documentation
-
-## 🌟 Star Us!
-
-If this project was helpful to you, please give it a star so others can find it too.
+- 🐛 [Report Issues](../../issues)
+- 💬 [Discussions](../../discussions)
+- 📧 Contact: [your-email@domain.com]
 
 ---
 
-**Important Note**: This software is completely standalone and does not require any external services. All processing is done in your browser.
+## Persian
 
-## 📸 Sample Images
+نرم‌افزار تحلیل تصویر بتن CIA نسخه 1.5.2 🔬
 
-![Image Analysis Interface](https://via.placeholder.com/800x400/4f46e5/ffffff?text=Image+Analysis+Interface)
+ابزاری قدرتمند و کاملاً مستقل برای تحلیل تصاویر میکروسکوپی و شناسایی مواد مختلف که کاملاً در مرورگر شما کار می‌کند.
 
-![Analysis Results](https://via.placeholder.com/800x400/059669/ffffff?text=Analysis+Results)
+### ✨ ویژگی‌های کلیدی
 
-![Interactive Charts](https://via.placeholder.com/800x400/dc2626/ffffff?text=Interactive+Charts)
+- 🚀 **کاملاً مستقل** - بدون نیاز به سرور یا اینترنت
+- 🎯 **10 الگوریتم پیشرفته** - شامل Mean Shift، Watershed و FCM جدید
+- 🌈 **تحلیل دقیق مواد** - شناسایی و تحلیل مواد مختلف
+- 📊 **نمودارهای تعاملی** - نمایش زیبا با Chart.js
+- 💾 **ذخیره محلی** - تمام داده‌ها در مرورگر شما
+- 🌐 **پشتیبانی دوزبانه** - رابط کامل فارسی و انگلیسی
+- 📱 **طراحی واکنش‌گرا** - کار روی دسکتاپ، تبلت و موبایل
+- 🔄 **ناوبری برگشت** - بازگشت به مراحل قبلی در هر زمان
+
+### 🆕 جدید در نسخه 1.5.2
+
+#### الگوریتم‌های پیشرفته اضافه شده:
+8. **Mean Shift Segmentation** - تقسیم‌بندی نواحی همگن
+9. **Watershed Segmentation** - جداسازی اشیاء متصل
+10. **Fuzzy C-Means (FCM)** - تحلیل مرزهای فازی
+
+#### ویژگی‌های بهبود یافته:
+- **فرمول‌های ریاضی** برای هر الگوریتم
+- **توصیه‌های استفاده** به دو زبان
+- **ناوبری برگشت** - بازگشت به هر مرحله قبلی
+- **اطلاعات الگوریتم** در نتایج تحلیل
+- **پشتیبانی کامل چندزبانه**
+
+### 🚀 شروع سریع
+
+#### روش 1: استفاده مستقیم (توصیه شده)
+1. **دانلود فایل‌ها** - تمام فایل‌ها را از این مخزن دانلود کنید
+2. **باز کردن در مرورگر** - فایل `index.html` را در مرورگر باز کنید
+3. **شروع تحلیل** - تصاویر خود را آپلود کرده و تحلیل را شروع کنید
+
+### 📖 راهنمای استفاده
+
+#### مرحله 1️⃣: آپلود تصویر
+- تصویر میکروسکوپی خود را آپلود کنید
+- فرمت‌های JPG، PNG، GIF پشتیبانی می‌شوند
+
+#### مرحله 2️⃣: انتخاب الگوریتم
+از 10 الگوریتم موجود انتخاب کنید و فرمول ریاضی و توصیه‌های استفاده را مشاهده کنید
+
+#### مرحله 3️⃣: پردازش و تحلیل
+- فرمول ریاضی و توصیه‌ها را مشاهده کنید
+- تصویر را با الگوریتم انتخابی پردازش کنید
+- در صورت نیاز به مرحله قبل برگردید
+
+#### مرحله 4️⃣: انتخاب خط مبنا
+- خط مبنا را روی تصویر پردازش شده رسم کنید
+- از چسبندگی مغناطیسی استفاده کنید
+
+#### مرحله 5️⃣: تکرار خط‌ها
+- پارامترهای تکرار را تنظیم کنید
+- خط‌های تحلیل را تولید کنید
+
+#### مرحله 6️⃣: تحلیل فاصله
+- واحدهای اندازه‌گیری را پیکربندی کنید
+- نسبت پیکسل به واقعیت را تنظیم کنید
+
+#### مرحله 7️⃣: مشاهده نتایج
+- نتایج جامع تحلیل
+- نمودارهای تعاملی
+- صادرات به فرمت PDF/Excel
+
+### 🔒 امنیت و حریم خصوصی
+
+- ✅ **100% سمت کلاینت** - تمام پردازش در مرورگر شما
+- ✅ **عدم انتقال داده** - تصاویر هرگز دستگاه شما را ترک نمی‌کنند
+- ✅ **قابلیت آفلاین** - بدون نیاز به اینترنت کار می‌کند
+- ✅ **بدون ثبت‌نام** - نیازی به حساب کاربری نیست
+
+---
+
+**Important Note**: This software is completely standalone and requires no external services. All processing is done in your browser.
+
+**نکته مهم**: این نرم‌افزار کاملاً مستقل است و نیازی به سرویس خارجی ندارد. تمام پردازش در مرورگر شما انجام می‌شود.
+
+## 📸 Sample Screenshots
+
+![Algorithm Selection](https://via.placeholder.com/800x400/4f46e5/ffffff?text=Algorithm+Selection+with+Formulas)
+
+![Analysis Results](https://via.placeholder.com/800x400/059669/ffffff?text=Analysis+Results+with+Back+Navigation)
+
+![Interactive Charts](https://via.placeholder.com/800x400/dc2626/ffffff?text=Interactive+Charts+and+Visualizations)
+
+---
+
+© 2024 All rights reserved by Aghajanian

@@ -1,129 +1,199 @@
-# راهنمای نصب و راه‌اندازی
+# Installation Guide | راهنمای نصب
 
-## روش‌های مختلف نصب
+[English](#english-installation) | [فارسی](#راهنمای-نصب-فارسی)
 
-### 🚀 روش 1: استفاده مستقیم (ساده‌ترین)
+---
 
-1. **دانلود فایل‌ها:**
+## English Installation
+
+### 🚀 Quick Start (Recommended)
+
+#### Method 1: Direct Browser Use
+1. **Download Files**
    ```bash
-   # کلون کردن مخزن
-   git clone https://github.com/[username]/image-analysis-tool.git
-   cd image-analysis-tool
+   git clone https://github.com/[username]/cia-web-image-analysis.git
+   cd cia-web-image-analysis
    ```
 
-2. **اجرای مستقیم:**
-   - فایل `dist/index.html` را در مرورگر باز کنید
-   - یا از یکی از روش‌های زیر استفاده کنید:
+2. **Open in Browser**
+   - Simply open `index.html` in your web browser
+   - No installation required!
 
-   ```bash
-   # با Python 3
-   cd dist
-   python -m http.server 8000
-   # سپس به http://localhost:8000 بروید
-   
-   # با Node.js
-   npx serve dist
-   
-   # با PHP
-   cd dist
-   php -S localhost:8000
-   ```
-
-### 🛠️ روش 2: ساخت از کد منبع
-
+#### Method 2: Local Server
 ```bash
-# 1. کلون پروژه
-git clone https://github.com/[username]/image-analysis-tool.git
-cd image-analysis-tool
+# With Python 3
+python -m http.server 8000
+# Then visit http://localhost:8000
 
-# 2. نصب Node.js (اگر نصب نیست)
-# از https://nodejs.org دانلود کنید
+# With Node.js
+npx serve . -p 8000
 
-# 3. نصب وابستگی‌ها
-npm install
-
-# 4. اجرا در حالت توسعه
-npm run dev
-
-# 5. ساخت نسخه نهایی
-npm run build
-
-# 6. پیش‌نمایش نسخه ساخته شده
-npm run preview
+# With PHP
+php -S localhost:8000
 ```
 
-## پیش‌نیازها
+### 📋 System Requirements
 
-### برای استفاده مستقیم:
-- مرورگر مدرن (Chrome, Firefox, Safari, Edge)
-- هیچ نیاز دیگری نیست!
+#### Minimum Requirements:
+- **Browser**: Chrome 80+, Firefox 75+, Safari 13+, Edge 80+
+- **JavaScript**: Must be enabled
+- **Local Storage**: Must be supported
+- **Canvas API**: Required for image processing
 
-### برای ساخت از کد منبع:
-- Node.js نسخه 16 یا بالاتر
-- npm یا yarn
+#### Recommended:
+- **Chrome or Firefox** for best performance
+- **4GB RAM** for large image processing
+- **Local web server** for optimal experience
 
-## تست نصب
+#### No Requirements:
+- ❌ No internet connection needed (after initial load)
+- ❌ No server setup required
+- ❌ No registration or login
+- ❌ No data collection
 
-پس از نصب، این مراحل را انجام دهید:
+### 🔧 Troubleshooting
 
-1. **باز کردن برنامه:** صفحه اصلی باید نمایش داده شود
-2. **آپلود تصویر:** یک تصویر نمونه آپلود کنید
-3. **پردازش:** گزینه‌های پردازش باید کار کنند
-4. **نتایج:** نمودارها و جداول باید نمایش داده شوند
+#### Issue: Blank page displayed
+**Solution:**
+- Use a local web server (not direct file://)
+- Refresh your browser
+- Check browser console (F12) for errors
 
-## رفع مشکلات رایج
+#### Issue: Files not loading
+**Solution:**
+- Ensure all files from the repository are present
+- Use HTTP/HTTPS (not file://)
+- Check that JavaScript is enabled
 
-### مشکل: صفحه خالی نمایش داده می‌شود
-**راه‌حل:**
-- از وب سرور محلی استفاده کنید (نه مستقیماً فایل HTML)
-- مرورگر را refresh کنید
-- Console مرورگر را بررسی کنید (F12)
-
-### مشکل: فایل‌ها لود نمی‌شوند
-**راه‌حل:**
-- مطمئن شوید تمام فایل‌های پوشه `dist` موجود هستند
-- از HTTPS یا HTTP استفاده کنید (نه file://)
-
-### مشکل: خطای CORS
-**راه‌حل:**
-- از وب سرور محلی استفاده کنید:
+#### Issue: CORS errors
+**Solution:**
+- Use a local web server:
   ```bash
-  npx serve dist
+  npx serve . -p 8000
+  # or
+  python -m http.server 8000
+  ```
+
+### 🌐 Browser Compatibility
+
+| Browser | Version | Status |
+|---------|---------|--------|
+| Chrome | 80+ | ✅ Fully Supported |
+| Firefox | 75+ | ✅ Fully Supported |
+| Safari | 13+ | ✅ Supported |
+| Edge | 80+ | ✅ Supported |
+| Opera | 67+ | ✅ Supported |
+
+### 📱 Device Compatibility
+
+- ✅ **Desktop** - Full functionality
+- ✅ **Tablet** - Full functionality with touch support
+- ✅ **Mobile** - Basic functionality (large images may be slow)
+
+---
+
+## راهنمای نصب فارسی
+
+### 🚀 شروع سریع (توصیه شده)
+
+#### روش 1: استفاده مستقیم در مرورگر
+1. **دانلود فایل‌ها**
+   ```bash
+   git clone https://github.com/[username]/cia-web-image-analysis.git
+   cd cia-web-image-analysis
+   ```
+
+2. **باز کردن در مرورگر**
+   - فقط فایل `index.html` را در مرورگر باز کنید
+   - نیازی به نصب نیست!
+
+#### روش 2: سرور محلی
+```bash
+# با Python 3
+python -m http.server 8000
+# سپس به http://localhost:8000 بروید
+
+# با Node.js
+npx serve . -p 8000
+
+# با PHP
+php -S localhost:8000
+```
+
+### 📋 پیش‌نیازهای سیستم
+
+#### حداقل نیازمندی‌ها:
+- **مرورگر**: Chrome 80+، Firefox 75+، Safari 13+، Edge 80+
+- **JavaScript**: باید فعال باشد
+- **Local Storage**: باید پشتیبانی شود
+- **Canvas API**: برای پردازش تصویر لازم است
+
+#### توصیه شده:
+- **Chrome یا Firefox** برای بهترین عملکرد
+- **4GB RAM** برای پردازش تصاویر بزرگ
+- **سرور محلی** برای تجربه بهینه
+
+#### نیازی نیست:
+- ❌ اتصال اینترنت (پس از بارگذاری اولیه)
+- ❌ راه‌اندازی سرور
+- ❌ ثبت‌نام یا ورود
+- ❌ جمع‌آوری داده
+
+### 🔧 رفع مشکلات
+
+#### مشکل: صفحه خالی نمایش داده می‌شود
+**راه‌حل:**
+- از سرور محلی استفاده کنید (نه مستقیماً file://)
+- مرورگر را refresh کنید
+- کنسول مرورگر (F12) را برای خطاها بررسی کنید
+
+#### مشکل: فایل‌ها لود نمی‌شوند
+**راه‌حل:**
+- مطمئن شوید تمام فایل‌های مخزن موجود هستند
+- از HTTP/HTTPS استفاده کنید (نه file://)
+- بررسی کنید JavaScript فعال باشد
+
+#### مشکل: خطاهای CORS
+**راه‌حل:**
+- از سرور محلی استفاده کنید:
+  ```bash
+  npx serve . -p 8000
   # یا
   python -m http.server 8000
   ```
 
-### مشکل: npm install خطا می‌دهد
-**راه‌حل:**
-- Node.js را به‌روزرسانی کنید
-- Cache npm را پاک کنید:
-  ```bash
-  npm cache clean --force
-  npm install
-  ```
+### 🌐 سازگاری مرورگر
 
-## تنظیمات پیشرفته
+| مرورگر | نسخه | وضعیت |
+|---------|------|--------|
+| Chrome | 80+ | ✅ کاملاً پشتیبانی شده |
+| Firefox | 75+ | ✅ کاملاً پشتیبانی شده |
+| Safari | 13+ | ✅ پشتیبانی شده |
+| Edge | 80+ | ✅ پشتیبانی شده |
+| Opera | 67+ | ✅ پشتیبانی شده |
 
-### تغییر پورت:
-```bash
-# برای Vite
-npm run dev -- --port 3000
+### 📱 سازگاری دستگاه
 
-# برای serve
-npx serve dist -p 3000
+- ✅ **دسکتاپ** - عملکرد کامل
+- ✅ **تبلت** - عملکرد کامل با پشتیبانی لمسی
+- ✅ **موبایل** - عملکرد پایه (تصاویر بزرگ ممکن است کند باشند)
 
-# برای Python
-python -m http.server 3000
-```
+---
 
-### تنظیمات مرورگر:
-- JavaScript باید فعال باشد
-- Local Storage باید مجاز باشد
-- Canvas API باید پشتیبانی شود
+## 🆘 Support | پشتیبانی
 
-## پشتیبانی
+### English Support:
+- 📧 Email: [your-email@domain.com]
+- 🐛 Issues: [GitHub Issues](../../issues)
+- 💬 Discussions: [GitHub Discussions](../../discussions)
 
-اگر مشکلی داشتید:
-1. [Issues](https://github.com/[username]/image-analysis-tool/issues) را بررسی کنید
-2. Issue جدید ایجاد کنید
-3. مستندات کامل را مطالعه کنید
+### پشتیبانی فارسی:
+- 📧 ایمیل: [your-email@domain.com]
+- 🐛 گزارش مشکل: [GitHub Issues](../../issues)
+- 💬 بحث و گفتگو: [GitHub Discussions](../../discussions)
+
+---
+
+**Made with ❤️ for the scientific community**
+
+**ساخته شده با ❤️ برای جامعه علمی**

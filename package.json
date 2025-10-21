@@ -1,19 +1,39 @@
 {
-  "name": "image-analysis-tool",
-  "version": "1.0.0",
-  "description": "ابزار تحلیل تصویر مستقل و قدرتمند",
-  "main": "dist/index.html",
+  "name": "cia-web-image-analysis",
+  "version": "1.5.2",
+  "description": "🔬 CIA v1.5.2 - Advanced Concrete Image Analysis Software | نرم‌افزار پیشرفته تحلیل تصویر بتن",
+  "main": "index.html",
   "scripts": {
-    "start": "npx serve dist",
-    "serve": "npx serve dist"
+    "start": "npx serve . -p 3000",
+    "serve": "npx serve . -p 8000"
   },
   "keywords": [
     "image-analysis",
+    "concrete-analysis",
     "microscopy",
     "standalone",
     "offline",
-    "persian"
+    "persian",
+    "farsi",
+    "image-processing",
+    "canvas",
+    "chart-js",
+    "medical-imaging",
+    "scientific-tool",
+    "mean-shift",
+    "watershed",
+    "fuzzy-c-means",
+    "otsu",
+    "adaptive-threshold"
   ],
-  "author": "Your Name",
-  "license": "MIT"
+  "author": "Aghajanian",
+  "license": "MIT",
+  "homepage": "https://github.com/[username]/cia-web-image-analysis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/[username]/cia-web-image-analysis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/[username]/cia-web-image-analysis/issues"
+  }
 }
