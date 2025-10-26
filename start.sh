@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "🚀 Starting CIA v1.5.2 - Concrete Image Analysis Software..."
-echo "راه‌اندازی نرم‌افزار تحلیل تصویر بتن CIA نسخه 1.5.2..."
+echo "🚀 Starting CIA v1.6.2 - Concrete Image Analysis Software..."
+echo "راه‌اندازی نرم‌افزار تحلیل تصویر بتن CIA نسخه 1.6.2..."
 
 # Check if Node.js is available
 if command -v node &> /dev/null; then

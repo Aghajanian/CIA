@@ -1,4 +1,4 @@
-# CIA v1.5.2 - Concrete Image Analysis Software 🔬
+# CIA v1.6.2 - Concrete Image Analysis Software 🔬
 
 [English](#english) | [فارسی](#persian)
 
@@ -8,7 +8,7 @@
 
 A powerful and completely standalone tool for analyzing microscopic images and identifying different materials. Works entirely in your browser without requiring any server or internet connection.
 
-![Version](https://img.shields.io/badge/version-1.5.2-blue)
+![Version](https://img.shields.io/badge/version-1.6.2-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Standalone](https://img.shields.io/badge/standalone-✓-brightgreen)
 ![Offline](https://img.shields.io/badge/offline-ready-orange)
@@ -25,14 +25,18 @@ A powerful and completely standalone tool for analyzing microscopic images and i
 - 📱 **Responsive Design** - Works on desktop, tablet, and mobile
 - 🔄 **Back Navigation** - Return to previous steps anytime
 
-### 🆕 New in Version 1.5.2
+### 🆕 New in Version 1.6.2
 
-#### Advanced Algorithms Added:
-8. **Mean Shift Segmentation** - `x_{t+1} = Σ(xᵢK(xᵢ-xₜ)) / Σ(K(xᵢ-xₜ))`
-9. **Watershed Segmentation** - `W(f) = {x ∈ D | ∀y ∈ N(x): f(x) ≤ f(y)}`
-10. **Fuzzy C-Means (FCM)** - `uᵢⱼ = 1 / Σ((dᵢⱼ/dᵢₖ)^(2/(m-1)))`
+#### 🔧 Fixed & Optimized:
+- **Algorithm Execution Issues** - All 10 algorithms now work properly
+- **Performance Optimization** - Significantly faster processing speed
+- **UI Responsiveness** - No more browser freezing during processing
+- **Memory Management** - Better handling of large images
 
-#### Enhanced Features:
+#### ✨ Enhanced Features:
+- **Improved Algorithm Performance** - Optimized Mean Shift, Watershed, and FCM
+- **Better Error Handling** - Enhanced user feedback and stability
+- **Loading Indicators** - Visual feedback during processing
 - **Mathematical Formulas** displayed for each algorithm
 - **Usage Recommendations** in both languages
 - **Back Navigation** - Return to any previous step
@@ -153,7 +157,7 @@ MIT License - Free for personal and commercial use
 
 ## Persian
 
-نرم‌افزار تحلیل تصویر بتن CIA نسخه 1.5.2 🔬
+نرم‌افزار تحلیل تصویر بتن CIA نسخه 1.6.2 🔬
 
 ابزاری قدرتمند و کاملاً مستقل برای تحلیل تصاویر میکروسکوپی و شناسایی مواد مختلف که کاملاً در مرورگر شما کار می‌کند.
 
@@ -168,14 +172,18 @@ MIT License - Free for personal and commercial use
 - 📱 **طراحی واکنش‌گرا** - کار روی دسکتاپ، تبلت و موبایل
 - 🔄 **ناوبری برگشت** - بازگشت به مراحل قبلی در هر زمان
 
-### 🆕 جدید در نسخه 1.5.2
+### 🆕 جدید در نسخه 1.6.2
 
-#### الگوریتم‌های پیشرفته اضافه شده:
-8. **Mean Shift Segmentation** - تقسیم‌بندی نواحی همگن
-9. **Watershed Segmentation** - جداسازی اشیاء متصل
-10. **Fuzzy C-Means (FCM)** - تحلیل مرزهای فازی
+#### 🔧 رفع مشکلات و بهینه‌سازی:
+- **رفع مشکلات اجرای الگوریتم‌ها** - تمام 10 الگوریتم حالا به درستی کار می‌کنند
+- **بهینه‌سازی عملکرد** - سرعت پردازش به طور قابل توجهی بهبود یافته
+- **بهبود واکنش‌پذیری رابط** - دیگر مرورگر هنگ نمی‌کند
+- **مدیریت حافظه** - مدیریت بهتر تصاویر بزرگ
 
-#### ویژگی‌های بهبود یافته:
+#### ✨ ویژگی‌های بهبود یافته:
+- **بهبود عملکرد الگوریتم‌ها** - بهینه‌سازی Mean Shift، Watershed و FCM
+- **مدیریت خطای بهتر** - بازخورد بهتر به کاربر و پایداری بیشتر
+- **نشانگرهای بارگذاری** - بازخورد بصری در طول پردازش
 - **فرمول‌های ریاضی** برای هر الگوریتم
 - **توصیه‌های استفاده** به دو زبان
 - **ناوبری برگشت** - بازگشت به هر مرحله قبلی
