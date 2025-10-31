@@ -1,254 +1,543 @@
-# CIA v1.6.2 - Concrete Image Analysis Software 🔬
+# Concrete Image Analysis (CIA) v1.7.2 - Web Version | نرم‌افزار تحلیل تصویر بتن (CIA) نسخه 1.7.2 - وب
 
-[English](#english) | [فارسی](#persian)
+[English](#english) | [فارسی](#فارسی)
 
 ---
 
-## English
+## 🌐 Online Access | دسترسی آنلاین
 
-A powerful and completely standalone tool for analyzing microscopic images and identifying different materials. Works entirely in your browser without requiring any server or internet connection.
+**If you cannot deploy the application files on your local server, you can use the active version of the software at:**
 
-![Version](https://img.shields.io/badge/version-1.6.2-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Standalone](https://img.shields.io/badge/standalone-✓-brightgreen)
-![Offline](https://img.shields.io/badge/offline-ready-orange)
-![Persian](https://img.shields.io/badge/persian-supported-red)
+**در صورت عدم امکان پیاده‌سازی فایل‌های برنامه در سرور محلی، می‌توانید از نسخه فعال نرم‌افزار استفاده کنید:**
 
-### ✨ Key Features
+**🔗 [https://ali.aghajanian.org/cia/index.html](https://ali.aghajanian.org/cia/index.html)**
 
-- 🚀 **Completely Standalone** - No server or internet required
-- 🎯 **10 Advanced Algorithms** - Including new Mean Shift, Watershed, and FCM
-- 🌈 **Precise Material Analysis** - Identify and analyze different materials
-- 📊 **Interactive Charts** - Beautiful visualizations with Chart.js
-- 💾 **Local Storage** - All data stays in your browser
-- 🌐 **Bilingual Support** - Full Persian and English interface
-- 📱 **Responsive Design** - Works on desktop, tablet, and mobile
-- 🔄 **Back Navigation** - Return to previous steps anytime
+---
 
-### 🆕 New in Version 1.6.2
+# English
 
-#### 🔧 Fixed & Optimized:
-- **Algorithm Execution Issues** - All 10 algorithms now work properly
-- **Performance Optimization** - Significantly faster processing speed
-- **UI Responsiveness** - No more browser freezing during processing
-- **Memory Management** - Better handling of large images
+## 📋 About the Software
 
-#### ✨ Enhanced Features:
-- **Improved Algorithm Performance** - Optimized Mean Shift, Watershed, and FCM
-- **Better Error Handling** - Enhanced user feedback and stability
-- **Loading Indicators** - Visual feedback during processing
-- **Mathematical Formulas** displayed for each algorithm
-- **Usage Recommendations** in both languages
-- **Back Navigation** - Return to any previous step
-- **Algorithm Information** in analysis results
-- **Complete Multilingual Support**
+The Concrete Image Analysis (CIA) software is an advanced and specialized tool for analyzing concrete microstructure and examining the Interfacial Transition Zone (ITZ) between aggregate and cement paste. This software provides accurate and scientific analysis of concrete microscopic images using advanced image processing algorithms.
 
-### 🚀 Quick Start
+## ✨ Key Features
 
-#### Method 1: Direct Use (Recommended)
-1. **Download Files** - Download all files from this repository
-2. **Open in Browser** - Simply open `index.html` in your web browser
-3. **Start Analyzing** - Upload your images and begin analysis
+### 🔬 Multi-Algorithm Analysis
+- Support for 10+ different image processing algorithms
+- Algorithm performance comparison capability
+- Comprehensive and comparative result analysis
 
-#### Method 2: Local Server
-```bash
-# With Python
-python -m http.server 8000
+### 📊 Advanced Analysis
+- **Noise Detection**: Noise heatmap and distribution analysis
+- **Color Spectrum Analysis**: Four-phase material classification
+- **Region Analysis**: Detailed examination of different image regions
+- **Advanced Statistics**: Mean, standard deviation, and range calculations
 
-# With Node.js
-npx serve . -p 8000
+### 📈 Charts and Data Visualization
+- Interactive charts with Chart.js
+- Noise detection heatmaps
+- Algorithm comparison charts
+- Material distribution visualization
 
-# With PHP
-php -S localhost:8000
+### 📄 Professional Reporting
+- **Academic Reports**: Suitable for papers and research
+- **Comprehensive Reports**: Including all analysis details
+- **Comparative Reports**: Algorithm performance comparison
+- **PDF and Excel Output**: Multiple formats for use
+
+### 🌍 Bilingual Support
+- Persian and English user interface
+- Bilingual reports
+- Full compatibility with Persian RTL layout
+
+### 💾 Data Management
+- Save and load results
+- Multiple project management
+- Previous results comparison capability
+
+## 🚀 Installation and Setup
+
+### Prerequisites
+- Web server (Apache, Nginx, or any other web server)
+- Modern browser (Chrome, Firefox, Safari, Edge)
+- Minimum 2GB free space
+
+### Installation Steps
+
+1. **Download Files**
+   ```bash
+   # Download or clone repository
+   git clone [repository-url]
+   cd CIA-Web-1.7.2
+   ```
+
+2. **Copy Files to Server**
+   ```bash
+   # Copy all files to web server directory
+   cp -r * /var/www/html/cia/
+   # or
+   cp -r * /path/to/your/webserver/directory/
+   ```
+
+3. **Set Permissions**
+   ```bash
+   # Set appropriate permissions
+   chmod 755 /var/www/html/cia/
+   chmod 644 /var/www/html/cia/*
+   chmod 644 /var/www/html/cia/assets/*
+   ```
+
+4. **Test Functionality**
+   - Open `test.html` file in browser
+   - If displayed correctly, open `index.html`
+
+## 📁 File Structure
+
+```
+CIA-Web-1.7.2/
+├── index.html              # Main application file
+├── assets/                 # JavaScript and CSS files
+│   ├── index-*.js         # Main application code
+│   ├── index-*.css        # Application styles
+│   ├── jspdf.es.min-*.js  # PDF generation library
+│   └── ...                # Other libraries
+├── .htaccess              # Apache server settings
+├── test.html              # Functionality test file
+├── README.md              # This file
+├── LICENSE                # Software license
+└── SECURITY.md            # Security guide
 ```
 
-### 📖 Usage Guide
+## 🔧 Troubleshooting
 
-#### Step 1️⃣: Upload Image
-- Upload your microscopic image (JPG, PNG, GIF supported)
-- Drag & drop or click to select
+### Common Issues and Solutions
 
-#### Step 2️⃣: Select Algorithm
-Choose from 10 available algorithms:
-- **Otsu** - Automatic optimal threshold
-- **Adaptive** - Variable lighting compensation
-- **Triangle** - Asymmetric histogram processing
-- **Wellner** - Local adaptive threshold
-- **Multi-level** - Multiple threshold segmentation
-- **K-means** - Clustering-based segmentation
-- **Mean Shift** - Homogeneous region detection
-- **Watershed** - Connected object separation
-- **FCM** - Fuzzy boundary analysis
-- **Manual** - User-controlled threshold
+1. **White page displayed**
+   - Check browser Console (F12)
+   - Check file permissions
+   - Copy `.htaccess` file
 
-#### Step 3️⃣: Process & Analyze
-- View mathematical formula and recommendations
-- Process image with selected algorithm
-- Navigate back to change settings anytime
+2. **JavaScript files not loading**
+   - Check server MIME types
+   - Check file paths in `index.html`
 
-#### Step 4️⃣: Select Baseline
-- Draw baseline on processed image
-- Use magnetic snapping for precision
-- Return to previous step if needed
+3. **CORS error**
+   - Place `.htaccess` file in main directory
+   - Check server CORS settings
 
-#### Step 5️⃣: Replicate Lines
-- Set replication parameters
-- Generate analysis lines
-- Adjust settings and regenerate
+### Quick Test
+```bash
+# Test file access
+curl -I http://your-domain.com/cia/index.html
+curl -I http://your-domain.com/cia/assets/index-*.js
+```
 
-#### Step 6️⃣: Distance Analysis
-- Configure measurement units
-- Set pixel-to-reality ratio
-- Start comprehensive analysis
+## 📖 Usage Guide
 
-#### Step 7️⃣: View Results
-- Comprehensive analysis results
-- Interactive charts and visualizations
-- Export to PDF/Excel formats
+### Image Analysis Steps
 
-### 🔬 Algorithm Information
+1. **Upload Image**
+   - Click "Select Image"
+   - Choose concrete microscopic image
+   - Supported formats: JPG, PNG, BMP
 
-Each algorithm includes:
-- **Mathematical Formula** with proper notation
-- **Detailed Description** in both languages
-- **Usage Recommendations** for optimal results
-- **Best Use Cases** for different image types
+2. **Select Algorithm**
+   - Choose one from algorithms menu
+   - Adjust threshold if needed
+   - Click "Start Analysis"
 
-### 🛠️ Technologies Used
+3. **View Results**
+   - Results displayed in different tabs
+   - Interactive charts and tables
+   - Zoom and detail examination capability
 
-- **React 18** + **TypeScript** - Modern UI framework
-- **Vite** - Fast build system
-- **Tailwind CSS** - Responsive design
-- **Chart.js** - Interactive visualizations
-- **Canvas API** - Advanced image processing
-- **jsPDF** - PDF report generation
-- **html2canvas** - Chart to image conversion
+4. **Generate Report**
+   - Select desired option from "Output" menu
+   - Enter researcher information (optional)
+   - Download PDF or Excel report
 
-### 🔒 Security & Privacy
+### Multi-Algorithm Analysis
 
-- ✅ **100% Client-Side** - All processing in your browser
-- ✅ **No Data Transmission** - Images never leave your device
-- ✅ **Offline Capable** - Works without internet
-- ✅ **No Registration** - No accounts or personal data required
-- ✅ **Open Source** - Code available for inspection
+1. **Run Multiple Algorithms**
+   - Run different algorithms on one image
+   - Results automatically saved
 
-### 📊 Perfect For
+2. **Compare Results**
+   - Open "Algorithm Comparison" tab
+   - View comparative charts
+   - Select best algorithm
 
-- 🔬 **Scientific Research** - Microscopic sample analysis
-- 🏭 **Quality Control** - Material inspection
-- 🎓 **Education** - Teaching and learning tool
-- 🏢 **Industry** - Production line analysis
+## 🔒 Security and Privacy
 
-### 🤝 Contributing
+- All processing done in user's browser
+- No images sent to server
+- Data stored only in local browser
+- Complete data deletion capability
 
-This is an open-source project. Contributions welcome!
+## 🆘 Support
 
-### 📝 License
+### Contact Information
+- **Website**: [https://aghajanian.org](https://aghajanian.org)
+- **GitHub**: [https://github.com/Aghajanian](https://github.com/Aghajanian)
+- **Email**: For technical support
 
-MIT License - Free for personal and commercial use
-
-### 🆘 Support
-
-- 🐛 [Report Issues](../../issues)
-- 💬 [Discussions](../../discussions)
-- 📧 Contact: [your-email@domain.com]
+### Bug Reports
+Please report bugs and suggestions in GitHub Issues section.
 
 ---
 
-## Persian
+# فارسی
 
-نرم‌افزار تحلیل تصویر بتن CIA نسخه 1.6.2 🔬
+## 📋 درباره نرم‌افزار
 
-ابزاری قدرتمند و کاملاً مستقل برای تحلیل تصاویر میکروسکوپی و شناسایی مواد مختلف که کاملاً در مرورگر شما کار می‌کند.
+نرم‌افزار تحلیل تصویر بتن (CIA) ابزاری پیشرفته و تخصصی برای تحلیل ریزساختار بتن و بررسی ناحیه انتقال بین‌وجهی (ITZ) بین سنگدانه و خمیر سیمان است. این نرم‌افزار با استفاده از الگوریتم‌های پیشرفته پردازش تصویر، امکان تحلیل دقیق و علمی تصاویر میکروسکوپی بتن را فراهم می‌کند.
 
-### ✨ ویژگی‌های کلیدی
+## ✨ ویژگی‌های کلیدی
 
-- 🚀 **کاملاً مستقل** - بدون نیاز به سرور یا اینترنت
-- 🎯 **10 الگوریتم پیشرفته** - شامل Mean Shift، Watershed و FCM جدید
-- 🌈 **تحلیل دقیق مواد** - شناسایی و تحلیل مواد مختلف
-- 📊 **نمودارهای تعاملی** - نمایش زیبا با Chart.js
-- 💾 **ذخیره محلی** - تمام داده‌ها در مرورگر شما
-- 🌐 **پشتیبانی دوزبانه** - رابط کامل فارسی و انگلیسی
-- 📱 **طراحی واکنش‌گرا** - کار روی دسکتاپ، تبلت و موبایل
-- 🔄 **ناوبری برگشت** - بازگشت به مراحل قبلی در هر زمان
+### 🔬 تحلیل چند الگوریتمی
+- پشتیبانی از 10+ الگوریتم مختلف پردازش تصویر
+- امکان مقایسه عملکرد الگوریتم‌ها
+- تحلیل جامع و مقایسه‌ای نتایج
 
-### 🆕 جدید در نسخه 1.6.2
+### 📊 تحلیل پیشرفته
+- **تشخیص نویز**: نقشه حرارتی نویز و تحلیل توزیع
+- **تحلیل طیف رنگی**: طبقه‌بندی چهار فازی مواد
+- **تحلیل نواحی**: بررسی دقیق نواحی مختلف تصویر
+- **آمار پیشرفته**: محاسبه میانگین، انحراف معیار و محدوده‌ها
 
-#### 🔧 رفع مشکلات و بهینه‌سازی:
-- **رفع مشکلات اجرای الگوریتم‌ها** - تمام 10 الگوریتم حالا به درستی کار می‌کنند
-- **بهینه‌سازی عملکرد** - سرعت پردازش به طور قابل توجهی بهبود یافته
-- **بهبود واکنش‌پذیری رابط** - دیگر مرورگر هنگ نمی‌کند
-- **مدیریت حافظه** - مدیریت بهتر تصاویر بزرگ
+### 📈 نمودارها و تجسم داده
+- نمودارهای تعاملی با Chart.js
+- نقشه حرارتی تشخیص نویز
+- نمودارهای مقایسه‌ای الگوریتم‌ها
+- تجسم توزیع مواد
 
-#### ✨ ویژگی‌های بهبود یافته:
-- **بهبود عملکرد الگوریتم‌ها** - بهینه‌سازی Mean Shift، Watershed و FCM
-- **مدیریت خطای بهتر** - بازخورد بهتر به کاربر و پایداری بیشتر
-- **نشانگرهای بارگذاری** - بازخورد بصری در طول پردازش
-- **فرمول‌های ریاضی** برای هر الگوریتم
-- **توصیه‌های استفاده** به دو زبان
-- **ناوبری برگشت** - بازگشت به هر مرحله قبلی
-- **اطلاعات الگوریتم** در نتایج تحلیل
-- **پشتیبانی کامل چندزبانه**
+### 📄 گزارش‌گیری حرفه‌ای
+- **گزارش‌های آکادمیک**: مناسب برای مقالات و تحقیقات
+- **گزارش جامع**: شامل تمام جزئیات تحلیل
+- **گزارش مقایسه‌ای**: مقایسه عملکرد الگوریتم‌ها
+- **خروجی PDF و Excel**: فرمت‌های مختلف برای استفاده
 
-### 🚀 شروع سریع
+### 🌍 پشتیبانی دوزبانه
+- رابط کاربری فارسی و انگلیسی
+- گزارش‌های دوزبانه
+- تطبیق کامل با راست‌چین فارسی
 
-#### روش 1: استفاده مستقیم (توصیه شده)
-1. **دانلود فایل‌ها** - تمام فایل‌ها را از این مخزن دانلود کنید
-2. **باز کردن در مرورگر** - فایل `index.html` را در مرورگر باز کنید
-3. **شروع تحلیل** - تصاویر خود را آپلود کرده و تحلیل را شروع کنید
+### 💾 مدیریت داده‌ها
+- ذخیره و بارگذاری نتایج
+- مدیریت پروژه‌های متعدد
+- امکان مقایسه نتایج قبلی
 
-### 📖 راهنمای استفاده
+## 🚀 نصب و راه‌اندازی
 
-#### مرحله 1️⃣: آپلود تصویر
-- تصویر میکروسکوپی خود را آپلود کنید
-- فرمت‌های JPG، PNG، GIF پشتیبانی می‌شوند
+### پیش‌نیازها
+- وب سرور (Apache, Nginx, یا هر وب سرور دیگر)
+- مرورگر مدرن (Chrome, Firefox, Safari, Edge)
+- حداقل 2GB فضای خالی
 
-#### مرحله 2️⃣: انتخاب الگوریتم
-از 10 الگوریتم موجود انتخاب کنید و فرمول ریاضی و توصیه‌های استفاده را مشاهده کنید
+### مراحل نصب
 
-#### مرحله 3️⃣: پردازش و تحلیل
-- فرمول ریاضی و توصیه‌ها را مشاهده کنید
-- تصویر را با الگوریتم انتخابی پردازش کنید
-- در صورت نیاز به مرحله قبل برگردید
+1. **دانلود فایل‌ها**
+   ```bash
+   # دانلود یا کلون کردن مخزن
+   git clone [repository-url]
+   cd CIA-Web-1.7.2
+   ```
 
-#### مرحله 4️⃣: انتخاب خط مبنا
-- خط مبنا را روی تصویر پردازش شده رسم کنید
-- از چسبندگی مغناطیسی استفاده کنید
+2. **کپی فایل‌ها به سرور**
+   ```bash
+   # کپی تمام فایل‌ها به دایرکتوری وب سرور
+   cp -r * /var/www/html/cia/
+   # یا
+   cp -r * /path/to/your/webserver/directory/
+   ```
 
-#### مرحله 5️⃣: تکرار خط‌ها
-- پارامترهای تکرار را تنظیم کنید
-- خط‌های تحلیل را تولید کنید
+3. **تنظیم مجوزها**
+   ```bash
+   # تنظیم مجوزهای مناسب
+   chmod 755 /var/www/html/cia/
+   chmod 644 /var/www/html/cia/*
+   chmod 644 /var/www/html/cia/assets/*
+   ```
 
-#### مرحله 6️⃣: تحلیل فاصله
-- واحدهای اندازه‌گیری را پیکربندی کنید
-- نسبت پیکسل به واقعیت را تنظیم کنید
+4. **تست عملکرد**
+   - فایل `test.html` را در مرورگر باز کنید
+   - در صورت نمایش صحیح، `index.html` را باز کنید
 
-#### مرحله 7️⃣: مشاهده نتایج
-- نتایج جامع تحلیل
-- نمودارهای تعاملی
-- صادرات به فرمت PDF/Excel
+## 📁 ساختار فایل‌ها
 
-### 🔒 امنیت و حریم خصوصی
+```
+CIA-Web-1.7.2/
+├── index.html              # فایل اصلی برنامه
+├── assets/                 # فایل‌های JavaScript و CSS
+│   ├── index-*.js         # کد اصلی برنامه
+│   ├── index-*.css        # استایل‌های برنامه
+│   ├── jspdf.es.min-*.js  # کتابخانه تولید PDF
+│   └── ...                # سایر کتابخانه‌ها
+├── .htaccess              # تنظیمات سرور Apache
+├── test.html              # فایل تست عملکرد
+├── README.md              # این فایل
+├── LICENSE                # مجوز نرم‌افزار
+└── SECURITY.md            # راهنمای امنیت
+```
 
-- ✅ **100% سمت کلاینت** - تمام پردازش در مرورگر شما
-- ✅ **عدم انتقال داده** - تصاویر هرگز دستگاه شما را ترک نمی‌کنند
-- ✅ **قابلیت آفلاین** - بدون نیاز به اینترنت کار می‌کند
-- ✅ **بدون ثبت‌نام** - نیازی به حساب کاربری نیست
+## 🔧 عیب‌یابی
+
+### مشکلات رایج و راه‌حل‌ها
+
+1. **صفحه سفید نمایش داده می‌شود**
+   - Console مرورگر را بررسی کنید (F12)
+   - مجوزهای فایل‌ها را بررسی کنید
+   - فایل `.htaccess` را کپی کنید
+
+2. **فایل‌های JavaScript لود نمی‌شوند**
+   - MIME types سرور را بررسی کنید
+   - مسیر فایل‌ها در `index.html` را بررسی کنید
+
+3. **خطای CORS**
+   - فایل `.htaccess` را در دایرکتوری اصلی قرار دهید
+   - تنظیمات CORS سرور را بررسی کنید
+
+### تست سریع
+```bash
+# تست دسترسی به فایل‌ها
+curl -I http://your-domain.com/cia/index.html
+curl -I http://your-domain.com/cia/assets/index-*.js
+```
+
+## 📖 راهنمای استفاده
+
+### مراحل تحلیل تصویر
+
+1. **بارگذاری تصویر**
+   - روی "انتخاب تصویر" کلیک کنید
+   - تصویر میکروسکوپی بتن را انتخاب کنید
+   - فرمت‌های پشتیبانی شده: JPG, PNG, BMP
+
+2. **انتخاب الگوریتم**
+   - از منوی الگوریتم‌ها یکی را انتخاب کنید
+   - در صورت نیاز آستانه را تنظیم کنید
+   - روی "شروع تحلیل" کلیک کنید
+
+3. **مشاهده نتایج**
+   - نتایج در تب‌های مختلف نمایش داده می‌شود
+   - نمودارها و جداول قابل تعامل هستند
+   - امکان زوم و بررسی جزئیات
+
+4. **تولید گزارش**
+   - از منوی "خروجی" گزینه مورد نظر را انتخاب کنید
+   - اطلاعات محقق را وارد کنید (اختیاری)
+   - گزارش PDF یا Excel دانلود خواهد شد
+
+### تحلیل چند الگوریتمی
+
+1. **اجرای چندین الگوریتم**
+   - الگوریتم‌های مختلف را روی یک تصویر اجرا کنید
+   - نتایج به صورت خودکار ذخیره می‌شوند
+
+2. **مقایسه نتایج**
+   - تب "مقایسه الگوریتم‌ها" را باز کنید
+   - نمودارهای مقایسه‌ای را مشاهده کنید
+   - بهترین الگوریتم را انتخاب کنید
+
+## 🔒 امنیت و حریم خصوصی
+
+- تمام پردازش‌ها در مرورگر کاربر انجام می‌شود
+- هیچ تصویری به سرور ارسال نمی‌شود
+- داده‌ها فقط در مرورگر محلی ذخیره می‌شوند
+- امکان پاک کردن کامل داده‌ها
+
+## 🆘 پشتیبانی
+
+### راه‌های تماس
+- **وب‌سایت**: [https://aghajanian.org](https://aghajanian.org)
+- **گیت‌هاب**: [https://github.com/Aghajanian](https://github.com/Aghajanian)
+- **ایمیل**: برای پشتیبانی فنی
+
+### گزارش باگ
+لطفاً باگ‌ها و پیشنهادات را در بخش Issues گیت‌هاب گزارش دهید.
+
+## ✨ ویژگی‌های کلیدی
+
+### 🔬 تحلیل چند الگوریتمی
+- پشتیبانی از 10+ الگوریتم مختلف پردازش تصویر
+- امکان مقایسه عملکرد الگوریتم‌ها
+- تحلیل جامع و مقایسه‌ای نتایج
+
+### 📊 تحلیل پیشرفته
+- **تشخیص نویز**: نقشه حرارتی نویز و تحلیل توزیع
+- **تحلیل طیف رنگی**: طبقه‌بندی چهار فازی مواد
+- **تحلیل نواحی**: بررسی دقیق نواحی مختلف تصویر
+- **آمار پیشرفته**: محاسبه میانگین، انحراف معیار و محدوده‌ها
+
+### 📈 نمودارها و تجسم داده
+- نمودارهای تعاملی با Chart.js
+- نقشه حرارتی تشخیص نویز
+- نمودارهای مقایسه‌ای الگوریتم‌ها
+- تجسم توزیع مواد
+
+### 📄 گزارش‌گیری حرفه‌ای
+- **گزارش‌های آکادمیک**: مناسب برای مقالات و تحقیقات
+- **گزارش جامع**: شامل تمام جزئیات تحلیل
+- **گزارش مقایسه‌ای**: مقایسه عملکرد الگوریتم‌ها
+- **خروجی PDF و Excel**: فرمت‌های مختلف برای استفاده
+
+### 🌍 پشتیبانی دوزبانه
+- رابط کاربری فارسی و انگلیسی
+- گزارش‌های دوزبانه
+- تطبیق کامل با راست‌چین فارسی
+
+### 💾 مدیریت داده‌ها
+- ذخیره و بارگذاری نتایج
+- مدیریت پروژه‌های متعدد
+- امکان مقایسه نتایج قبلی
+
+## 🚀 نصب و راه‌اندازی
+
+### پیش‌نیازها
+- وب سرور (Apache, Nginx, یا هر وب سرور دیگر)
+- مرورگر مدرن (Chrome, Firefox, Safari, Edge)
+- حداقل 2GB فضای خالی
+
+### مراحل نصب
+
+1. **دانلود فایل‌ها**
+   ```bash
+   # دانلود یا کلون کردن مخزن
+   git clone [repository-url]
+   cd CIA-Web-1.7.2
+   ```
+
+2. **کپی فایل‌ها به سرور**
+   ```bash
+   # کپی تمام فایل‌ها به دایرکتوری وب سرور
+   cp -r * /var/www/html/cia/
+   # یا
+   cp -r * /path/to/your/webserver/directory/
+   ```
+
+3. **تنظیم مجوزها**
+   ```bash
+   # تنظیم مجوزهای مناسب
+   chmod 755 /var/www/html/cia/
+   chmod 644 /var/www/html/cia/*
+   chmod 644 /var/www/html/cia/assets/*
+   ```
+
+4. **تست عملکرد**
+   - فایل `test.html` را در مرورگر باز کنید
+   - در صورت نمایش صحیح، `index.html` را باز کنید
+
+## 📁 ساختار فایل‌ها
+
+```
+CIA-Web-1.7.2/
+├── index.html              # فایل اصلی برنامه
+├── assets/                 # فایل‌های JavaScript و CSS
+│   ├── index-*.js         # کد اصلی برنامه
+│   ├── index-*.css        # استایل‌های برنامه
+│   ├── jspdf.es.min-*.js  # کتابخانه تولید PDF
+│   └── ...                # سایر کتابخانه‌ها
+├── .htaccess              # تنظیمات سرور Apache
+├── test.html              # فایل تست عملکرد
+├── README.md              # این فایل
+├── LICENSE                # مجوز نرم‌افزار
+└── SECURITY.md            # راهنمای امنیت
+```
+
+## 🔧 عیب‌یابی
+
+### مشکلات رایج و راه‌حل‌ها
+
+1. **صفحه سفید نمایش داده می‌شود**
+   - Console مرورگر را بررسی کنید (F12)
+   - مجوزهای فایل‌ها را بررسی کنید
+   - فایل `.htaccess` را کپی کنید
+
+2. **فایل‌های JavaScript لود نمی‌شوند**
+   - MIME types سرور را بررسی کنید
+   - مسیر فایل‌ها در `index.html` را بررسی کنید
+
+3. **خطای CORS**
+   - فایل `.htaccess` را در دایرکتوری اصلی قرار دهید
+   - تنظیمات CORS سرور را بررسی کنید
+
+### تست سریع
+```bash
+# تست دسترسی به فایل‌ها
+curl -I http://your-domain.com/cia/index.html
+curl -I http://your-domain.com/cia/assets/index-*.js
+```
+
+## 📖 راهنمای استفاده
+
+### مراحل تحلیل تصویر
+
+1. **بارگذاری تصویر**
+   - روی "انتخاب تصویر" کلیک کنید
+   - تصویر میکروسکوپی بتن را انتخاب کنید
+   - فرمت‌های پشتیبانی شده: JPG, PNG, BMP
+
+2. **انتخاب الگوریتم**
+   - از منوی الگوریتم‌ها یکی را انتخاب کنید
+   - در صورت نیاز آستانه را تنظیم کنید
+   - روی "شروع تحلیل" کلیک کنید
+
+3. **مشاهده نتایج**
+   - نتایج در تب‌های مختلف نمایش داده می‌شود
+   - نمودارها و جداول قابل تعامل هستند
+   - امکان زوم و بررسی جزئیات
+
+4. **تولید گزارش**
+   - از منوی "خروجی" گزینه مورد نظر را انتخاب کنید
+   - اطلاعات محقق را وارد کنید (اختیاری)
+   - گزارش PDF یا Excel دانلود خواهد شد
+
+### تحلیل چند الگوریتمی
+
+1. **اجرای چندین الگوریتم**
+   - الگوریتم‌های مختلف را روی یک تصویر اجرا کنید
+   - نتایج به صورت خودکار ذخیره می‌شوند
+
+2. **مقایسه نتایج**
+   - تب "مقایسه الگوریتم‌ها" را باز کنید
+   - نمودارهای مقایسه‌ای را مشاهده کنید
+   - بهترین الگوریتم را انتخاب کنید
+
+## 🔒 امنیت و حریم خصوصی
+
+- تمام پردازش‌ها در مرورگر کاربر انجام می‌شود
+- هیچ تصویری به سرور ارسال نمی‌شود
+- داده‌ها فقط در مرورگر محلی ذخیره می‌شوند
+- امکان پاک کردن کامل داده‌ها
+
+## 🆘 پشتیبانی
+
+### راه‌های تماس
+- **وب‌سایت**: [https://aghajanian.org](https://aghajanian.org)
+- **گیت‌هاب**: [https://github.com/Aghajanian](https://github.com/Aghajanian)
+- **ایمیل**: برای پشتیبانی فنی
+
+### گزارش باگ
+لطفاً باگ‌ها و پیشنهادات را در بخش Issues گیت‌هاب گزارش دهید.
 
 ---
 
-**Important Note**: This software is completely standalone and requires no external services. All processing is done in your browser.
+## 📄 License | مجوز
 
-**نکته مهم**: این نرم‌افزار کاملاً مستقل است و نیازی به سرویس خارجی ندارد. تمام پردازش در مرورگر شما انجام می‌شود.
+This software is released under the MIT License. See the `LICENSE` file for more details.
 
-## 📸 Sample Screenshots
+این نرم‌افزار تحت مجوز MIT منتشر شده است. برای جزئیات بیشتر فایل `LICENSE` را مطالعه کنید.
 
-![Algorithm Selection](https://via.placeholder.com/800x400/4f46e5/ffffff?text=Algorithm+Selection+with+Formulas)
+## 🙏 Acknowledgments | تشکر
 
-![Analysis Results](https://via.placeholder.com/800x400/059669/ffffff?text=Analysis+Results+with+Back+Navigation)
+We thank all researchers and developers who have contributed to the development of this software.
 
-![Interactive Charts](https://via.placeholder.com/800x400/dc2626/ffffff?text=Interactive+Charts+and+Visualizations)
+از تمام محققان و توسعه‌دهندگانی که در توسعه این نرم‌افزار مشارکت داشته‌اند، تشکر می‌کنیم.
 
 ---
 
-© 2024 All rights reserved by Aghajanian
+**© 2024 All rights reserved - Aghajanian | © 2024 تمام حقوق محفوظ است - آقاجانیان**
+
+**Version | نسخه**: 1.7.2  
+**Release Date | تاریخ انتشار**: December 2024 | دسامبر 2024  
+**Compatibility | سازگاری**: All modern browsers | تمام مرورگرهای مدرن

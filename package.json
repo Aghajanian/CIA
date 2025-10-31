@@ -1,7 +1,7 @@
 {
   "name": "cia-web-image-analysis",
-  "version": "1.6.2",
-  "description": "🔬 CIA v1.6.2 - Advanced Concrete Image Analysis Software | نرم‌افزار پیشرفته تحلیل تصویر بتن",
+  "version": "1.7.2",
+  "description": "🔬 CIA v1.7.2 - Advanced Concrete Image Analysis Software | نرم‌افزار پیشرفته تحلیل تصویر بتن",
   "main": "index.html",
   "scripts": {
     "start": "npx serve . -p 3000",
