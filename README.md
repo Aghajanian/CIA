@@ -522,13 +522,13 @@ curl -I http://your-domain.com/cia/assets/index-*.js
 
 ---
 
-## 📄 License | مجوز
+## 📄 License
 
 This software is released under the MIT License. See the `LICENSE` file for more details.
 
 این نرم‌افزار تحت مجوز MIT منتشر شده است. برای جزئیات بیشتر فایل `LICENSE` را مطالعه کنید.
 
-## 🙏 Acknowledgments | تشکر
+## 🙏 Acknowledgments
 
 We thank all researchers and developers who have contributed to the development of this software.
 
