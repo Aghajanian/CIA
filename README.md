@@ -536,8 +536,8 @@ We thank all researchers and developers who have contributed to the development 
 
 ---
 
-**© 2024 All rights reserved - Aghajanian | © 2024 تمام حقوق محفوظ است - آقاجانیان**
+**© 2024 All rights reserved - Aghajanian | © 2024**
 
-**Version | نسخه**: 1.7.2  
-**Release Date | تاریخ انتشار**: December 2024 | دسامبر 2024  
-**Compatibility | سازگاری**: All modern browsers | تمام مرورگرهای مدرن
+**Version:**: 1.7.2  
+**Release Date:** December 2024  
+**Compatibility:** All modern browsers 
