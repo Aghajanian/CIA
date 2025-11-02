@@ -1,4 +1,4 @@
-# Concrete Image Analysis (CIA) v1.7.2 - Web Version | نرم‌افزار تحلیل تصویر بتن (CIA) نسخه 1.7.2 - وب
+# Concrete Image Analysis (CIA) v1.7.2 - Web Version
 
 [English](#english) | [فارسی](#فارسی)
 
