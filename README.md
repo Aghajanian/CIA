@@ -1,4 +1,4 @@
-# Concrete Image Analysis (CIA) v1.7.2 - Web Version
+# Concrete Image Analyzer (CIA) v1.7.2 - Web Version
 
 [English](#english) | [فارسی](#فارسی)
 
