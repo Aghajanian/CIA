@@ -184,6 +184,11 @@ curl -I http://your-domain.com/cia/assets/index-*.js
 ### Bug Reports
 Please report bugs and suggestions in GitHub Issues section.
 
+## Citation
+If you use CIA Toolkit, please cite:
+
+Aghajanian, A. (2025). Concrete Image Analyzer (CIA) Toolkit: AI-based Image Processing Framework for Concrete Microstructure Analysis (Version 1.7.2) [Software]. Zenodo. https://doi.org/10.5281/zenodo.17507576
+
 ---
 
 # فارسی
@@ -519,6 +524,11 @@ curl -I http://your-domain.com/cia/assets/index-*.js
 
 ### گزارش باگ
 لطفاً باگ‌ها و پیشنهادات را در بخش Issues گیت‌هاب گزارش دهید.
+
+## رفرنس دهی
+اگر از نرم افزار CIA استفاده کردید لطفا به صورت زیر ارجاع دهید.
+
+Aghajanian, A. (2025). Concrete Image Analyzer (CIA) Toolkit: AI-based Image Processing Framework for Concrete Microstructure Analysis (Version 1.7.2) [Software]. Zenodo. https://doi.org/10.5281/zenodo.17507576
 
 ---
 
